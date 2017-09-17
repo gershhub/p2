@@ -1,9 +1,9 @@
 .PHONY:clean
 
 p2: main.o p2.o
-	g++ $(CFLAGS) -o $@ $^
+	gcc $(CFLAGS) -o $@ $^
 
 %.o:%.cc
-	g++ -c $(CFLAGS) -o $@ $<
+	gcc -c $(CFLAGS) -o $@ $<
 clean:
 	rm p2 *.o
